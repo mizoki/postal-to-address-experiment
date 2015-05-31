@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @user.postal_code %>
+</p>
+
+<p>
+  <strong>Prefecture name:</strong>
+  <%= @user.prefecture_name %>
+</p>
+
+<p>
+  <strong>City name:</strong>
+  <%= @user.city_name %>
+</p>
+
+<p>
+  <strong>Town area name:</strong>
+  <%= @user.town_area_name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
