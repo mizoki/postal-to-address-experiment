@@ -1,3 +1,5 @@
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -17,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :postal_code %><br>
-    <%= f.text_field :postal_code %>
+    <%= f.text_field :postal_code, { onKeyUp: "AjaxZip3.zip2addr(this,'','user[prefecture_name]','user[city_name]', 'user[town_area_name]');" } %>
   </div>
   <div class="field">
     <%= f.label :prefecture_name %><br>
